@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "PORT=4400 neutrino start",
-    "build": "neutrino build"
+    "build": "neutrino build",
+    "test": "neutrino build"
   },
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.5",
