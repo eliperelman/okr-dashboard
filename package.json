@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.5",
-    "glamor": "^2.19.0",
     "neutrino": "^3.0.0",
     "neutrino-preset-react": "^2.1.0",
     "react": "^15.4.1",

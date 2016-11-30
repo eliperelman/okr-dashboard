@@ -7,6 +7,7 @@
         {
           "name": "Process Pipeline",
           "description": "Implement a process pipeline that supports multiple issue trackers and code review tools.",
+          "progress": 0,
           "score": null,
           "scoring": {
             "0.3": "30% of commits to mozilla-central landing via Autoland",
@@ -18,6 +19,14 @@
         {
           "name": "TaskCluster Migration",
           "description": "Migrate Firefox automated builds and tests to TaskCluster.",
+          "progress": {
+            "Linux x64 debug": 1,
+            "Linux x64 opt": 0.8,
+            "Linux x32 PGO": 0.1,
+            "Windows 7 opt": 0,
+            "Windows 10 debug": 0,
+            "macOS 10.12 debug": 0.3
+          },
           "score": "0.3",
           "scoring": {
             "0.3": "",
@@ -29,6 +38,7 @@
         {
           "name": "Non-PGO Try Times",
           "description": "All non-PGO Try jobs return test results within 90 minutes of job submission.",
+          "progress": 0.2,
           "score": "0.5",
           "scoring": {
             "0.3": "30% of all non-PGO try jobs return test results within 90 minutes of job submission",
@@ -46,6 +56,7 @@
         {
           "name": "Commit Blocking",
           "description": "Block and commit with issues detected by automated tests, static analysis, or linters.",
+          "progress": 0.3,
           "score": "+0.2",
           "scoring": {
             "+0.2": "All commits are run through linters successfully before they are landed",
@@ -56,6 +67,7 @@
         {
           "name": "Autolanding",
           "description": "All code is landed through Autoland.",
+          "progress": 0.4,
           "score": "0.7",
           "scoring": {
             "0.3": "",
@@ -67,6 +79,7 @@
         {
           "name": "Accessible build status",
           "description": "Anyone can easily determine whether or not a build passes our automated tests.",
+          "progress": 1,
           "score": "1.0",
           "scoring": {
             "0.3": "Less than 10 intermittent failures on average on Try",
@@ -78,6 +91,7 @@
         {
           "name": "Release Information",
           "description": "Deploy tooling that puts release information in the right hands at the right time.",
+          "progress": 0,
           "score": null,
           "scoring": {
             "0.3": "",
@@ -89,6 +103,7 @@
         {
           "name": "Release Centralization",
           "description": "Deploy tooling that centralizes control and reporting of all aspects of each release.",
+          "progress": 0.7,
           "score": "0.5",
           "scoring": {
             "0.3": "",
@@ -106,6 +121,7 @@
         {
           "name": "Risk Mitigation",
           "description": "Identify and mitigate all services with Security RRA Risks of Maximum or High.",
+          "progress": 1,
           "score": "1.0",
           "scoring": {
             "0.3": "30% of identified Maximum or High SecMap and RRA Risks mitigated",
@@ -117,6 +133,7 @@
         {
           "name": "3-Year Plan",
           "description": "Finalize and begin implementation of a 3-year plan for datacenter needs beyond 2018.",
+          "progress": 0.9,
           "score": "0.3",
           "scoring": {
             "0.3": "Agreed upon datacenter strategy plan with IT which includes projected capacity requirements for R&P for 2018 (based on historical trending and planning data available from Firefox Engineering)",
@@ -126,8 +143,21 @@
           }
         },
         {
+          "name": "Test Platforms",
+          "description": "Deploy new Firefox test platforms and update legacy test hardware.",
+          "progress": 0,
+          "score": null,
+          "scoring": {
+            "0.3": "Deploy one of Windows 10, Linux 16.04, OS X 10.12, new Windows 7 hardware, or new Linux 64 hardware",
+            "0.5": "Deploy two of Windows 10, Linux 16.04, OS X 10.12, new Windows 7 hardware, and new Linux 64 hardware",
+            "0.7": "Deploy three of Windows 10, Linux 16.04, OS X 10.12, new Windows 7 hardware, and new Linux 64 hardware",
+            "1.0": "Deploy all of Windows 10, Linux 16.04, OS X 10.12, new Windows 7 hardware, and new Linux 64 hardware"
+          }
+        },
+        {
           "name": "Maintenance",
           "description": "Maintain and update existing tools and processes",
+          "progress": 1,
           "score": "1.0",
           "scoring": {
             "0.3": "",

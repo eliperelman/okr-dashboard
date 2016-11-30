@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Objective from './components/Objective';
-import okrs from './okrs_sample.json';
+import data from './okrs_sample.json';
 import 'bootstrap/dist/css/bootstrap-flex.min.css';
 import './global.css';
 import logoUrl from './logo.png';
@@ -14,8 +14,12 @@ render((
       </div>
     </div>
     <div className="row">
-      {okrs.objectives.map(({ name, results }, key) => (
-        <Objective key={key} title={name} keyResults={results} />
+      {data.objectives.map((objective, key) => (
+        <Objective
+          key={key}
+          title={objective.name}
+          keyResults={objective.results}
+          goals={objective.okrs} />
       ))}
     </div>
   </div>

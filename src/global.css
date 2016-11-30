@@ -31,6 +31,7 @@ h1 img {
 h2, .h2 {
   font-size: 1.3rem;
   font-weight: 100;
+  margin-bottom: 0;
 }
 
 h3, .h3 {
@@ -38,6 +39,10 @@ h3, .h3 {
   font-weight: 100;
   margin-bottom: 5px;
   text-align: center;
+}
+
+.objective > .row:last-of-type > .col-xs > hr {
+  display: none;
 }
 
 .scoring {
@@ -50,15 +55,15 @@ h3, .h3 {
 }
 
 .scoring.empty {
-  border: 1px solid rgba(255, 0, 0, 1);
+  border: 1px solid rgba(273, 83, 79, 1);
 }
 
 .scoring.in-progress {
-  border: 1px solid rgba(255, 255, 0, 1);
+  border: 1px solid rgba(240, 173, 78, 1);
 }
 
 .scoring.achieved {
-  border: 1px solid rgba(0, 255, 0, 1);
+  border: 1px solid rgba(92, 184, 92, 1);
 }
 
 .score {
@@ -85,16 +90,16 @@ h3, .h3 {
 }
 
 .score.achieved {
-  background-color: rgba(0, 255, 0, .15);
+  background-color: rgba(92, 184, 92, .25);
 }
 
 .score.achieved:hover {
-  background-color: rgba(0, 255, 0, .4);
+  background-color: rgba(92, 184, 92, .75);
 }
 
 .score:hover {
   background-color: rgba(255, 255, 255, .25);
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 1);
 }
 
 .score:first-child {
@@ -118,19 +123,38 @@ h3, .h3 {
 
 .icon {
   vertical-align: middle;
-  margin-top: -2px;
-  cursor: pointer;
-  opacity: .4;
-  transition: opacity .3 ease;
+  display: inline-block;
 }
 
-.icon:hover {
+.icon-info {
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .3s ease;
+}
+
+.icon-info:hover {
   opacity: 1;
 }
 
 .icon svg {
   width: 16px;
   height: 16px;
+}
+
+.tag {
+  font-size: 65%;
+  border-radius: .1rem;
+  margin-right: 3px;
+}
+
+h3 .tag {
+  font-size: 80%;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+h3 .collapser {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
