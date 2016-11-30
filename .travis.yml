@@ -1,0 +1,21 @@
+language: node_js
+sudo: false
+cache:
+  apt: true
+  directories:
+  - "$HOME/.npm"
+  - "$HOME/.yarn-cache"
+  - node_modules
+node_js:
+- '6'
+env:
+  global:
+  - secure: 2EU/wjcT2OH2mzI1Yb1EcQp7qU4oeWtf8N/MaQRNW08CfYh8wZag+4BFzDsoa6lr6gHv/i2g2NwCzUmob81fKIx0j+Wts/k6aeOmK+ZTrNgcodzBmeElJglkhMppbXFgmpCumLoqgVSLa1cYyt8fD6ZDt7CKeJR2Sh3JXYycLa+mkV5v4+3GQ8yQusPMI57RDC3sWxcWTlOELk7yCIiV1/BYn+TxsDTAdLl9ahYJzAqvIxHbDkz7a+8IymgVgbgUo2jnrxLTXTwvh2gkS7byzTpE3ptZBFEnkRgiGQ5UaveJcv13ufei5A360t2M/O7BfWDRUMd70sCDmVGjWTvkYAaMA/2GiXKEnsjWUeOpDyTpaW8jCMVTKLOjszQ9/v2P05yZY7jpw7KWVdOiXiZv7AsJfh4DnjYisvrH5C7NI5ergY6+BkxSgHMSLVamfLf1Dv97bPuqoS/g/8mREqr6C1H9j9bOjP4oy7Tplb54tkrcl1kGp5EOzPIz3dFXtSIcxIpsQFnrDcXRJUTjmoSh04xxl7F2VYcENXW1HoWwxHXG7hM6RV0M0IUIxYHnLyMG2ZqMUJrANsuOQAvepWlAcmNVS2wy4BOr0cbSFTv95fhXvKnNv0YUdhnD2FPv3JIRtCxqi7WWYNZRlUnX2DKQr0PEJt+LUp4wjWx35Nm+bw8=
+before_install:
+- npm install --global yarn --cache-min 999999999
+install:
+- yarn
+script:
+- yarn test
+after_success:
+- "./deploy.sh"
