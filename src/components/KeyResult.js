@@ -39,9 +39,7 @@ export default class extends React.Component {
       .reduce((acc, value) => acc + value, 0) / values.length;
   }
 
-  getProgressLabel() {
-    const progress = this.getProgress();
-
+  getProgressLabel(progress = this.getProgress()) {
     if (!progress) {
       return 'danger';
     } else if (progress === 1) {
@@ -74,7 +72,7 @@ export default class extends React.Component {
             typeof this.props.result.progress === 'number' ? (
               <span>
                 {result.name}&nbsp;
-                <Label type={this.getProgressLabel()}>
+                <Label type={this.getProgressLabel(result.progress)}>
                   {
                     Math.floor(progress) === progress ?
                       progress :
@@ -86,7 +84,7 @@ export default class extends React.Component {
               <span className="collapser" onClick={() => this.collapse()}>
                 {this.state.collapseOpen ? <ArrowDown /> : <ArrowRight />}
                 {result.name}&nbsp;
-                <Label type={this.getProgressLabel()}>
+                <Label type={this.getProgressLabel(result.progress)}>
                   {
                     Math.floor(progress) === progress ?
                       progress :
@@ -109,23 +107,27 @@ export default class extends React.Component {
             </Tooltip>
           )}
         </h3>
-        {typeof this.props.result.progress !== 'number' && (
+        {typeof result.progress !== 'number' && (
           <Collapse isOpen={this.state.collapseOpen} style={{ paddingBottom: 15 }}>
             {
               Object
-              .keys(this.props.result.progress)
-              .map((item, key) => (
-                <div key={key} style={{ paddingLeft: '5%' }}>
-                  <Label type={this.getProgressLabel()}>
-                    {
-                      Math.floor(progress) === progress ?
-                        progress :
-                        progress.toFixed(2)
-                    }%
-                  </Label>&nbsp;
-                  <span style={{ fontSize: '.8rem' }}>{item}</span>
-                </div>
-              ))
+              .keys(result.progress)
+              .map((item, key) => {
+                const value = result.progress[item] * 100;
+
+                return (
+                  <div key={key} style={{ paddingLeft: '5%' }}>
+                    <Label type={this.getProgressLabel(result.progress[item])}>
+                      {
+                        Math.floor(value) === value ?
+                          value :
+                          value.toFixed(2)
+                      }%
+                    </Label>&nbsp;
+                    <span style={{ fontSize: '.8rem' }}>{item}</span>
+                  </div>
+                );
+              })
             }
           </Collapse>
         )}
