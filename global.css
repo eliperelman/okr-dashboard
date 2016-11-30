@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,300");
+
+html, body {
+  font-family: 'Work Sans';
+  font-weight: 100;
+  background-color: #333;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+hr {
+  border-top: 1px dotted rgba(255, 255, 255, .1);
+}
+
+h1, .h1 {
+  margin: 10px 0 -5px;
+  font-weight: 100;
+}
+
+h1 hr {
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+h1 img {
+  width: 45px;
+  height: 30.9px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+h2, .h2 {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+h3, .h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.objective {
+  margin: 10px;
+  padding: 10px;
+  border: 1px dotted rgba(255, 255, 255, .1);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.scoring {
+  height: 50px;
+  border: 1px solid rgba(255, 0, 0, 1);
+  border-radius: 25px;
+  padding: 2px;
+  margin: 0 0 25px;
+  align-items: stretch;
+}
+
+.scoring.empty {
+  border: 1px solid rgba(255, 0, 0, 1);
+}
+
+.scoring.in-progress {
+  border: 1px solid rgba(255, 255, 0, 1);
+}
+
+.scoring.achieved {
+  border: 1px solid rgba(0, 255, 0, 1);
+}
+
+.score {
+  flex: 1;
+  height: 44px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 0;
+  margin-right: 2px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, .1);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+  color: rgba(255, 255, 255, .7);
+  font-weight: bold;
+}
+
+.score > div {
+  padding-top: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.score.achieved {
+  background-color: rgba(0, 255, 0, .15);
+}
+
+.score.achieved:hover {
+  background-color: rgba(0, 255, 0, .4);
+}
+
+.score:hover {
+  background-color: rgba(255, 255, 255, .25);
+  color: rgba(255, 255, 255, .9);
+}
+
+.score:first-child {
+  border-radius: 22px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.score:last-child {
+  margin-right: 0;
+  border-radius: 22px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tooltip-inner {
+  background-color: #111;
+  font-family: 'Work Sans';
+  font-size: .75rem;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-top: -2px;
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .3 ease;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+}
