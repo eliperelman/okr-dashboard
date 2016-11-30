@@ -1,0 +1,131 @@
+{
+  "objectives": [
+    {
+      "name": "Enable rapid Firefox development and experimentation",
+      "okrs": ["Prototype the Future", "Build Core Strength"],
+      "results": [
+        {
+          "name": "Process Pipeline",
+          "description": "Implement a process pipeline that supports multiple issue trackers and code review tools.",
+          "scoring": {
+            "0.3": "30% of commits to mozilla-central landing via Autoland",
+            "0.5": "50% of commits to mozilla-central landing via Autoland",
+            "0.7": "70% of commits to mozilla-central landing via Autoland",
+            "1.0": "100% of commits to mozilla-central landing via Autoland"
+          }
+        },
+        {
+          "name": "TaskCluster Migration",
+          "description": "Migrate Firefox automated builds and tests to TaskCluster.",
+          "scoring": {
+            "0.3": "",
+            "0.5": "",
+            "0.7": "",
+            "1.0": ""
+          }
+        },
+        {
+          "name": "Non-PGO Try Times",
+          "description": "All non-PGO Try jobs return test results within 90 minutes of job submission.",
+          "scoring": {
+            "0.3": "30% of all non-PGO try jobs return test results within 90 minutes of job submission",
+            "0.5": "50% of all non-PGO try jobs return test results within 90 minutes of job submission",
+            "0.7": "70% of all non-PGO try jobs return test results within 90 minutes of job submission",
+            "1.0": "100% of all non-PGO try jobs return test results within 90 minutes of job submission"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Increase Firefox DAU via improved quality control mechanisms",
+      "okrs": ["Grow our Influence", "Build Core Strength"],
+      "results": [
+        {
+          "name": "Commit Blocking",
+          "description": "Block and commit with issues detected by automated tests, static analysis, or linters.",
+          "scoring": {
+            "+0.2": "All commits are run through linters successfully before they are landed",
+            "+0.3": "All commits are run through static analysis before they are landed",
+            "+0.5": "All commits have successful Try runs before they are landed"
+          }
+        },
+        {
+          "name": "Autolanding",
+          "description": "All code is landed through Autoland.",
+          "scoring": {
+            "0.3": "",
+            "0.5": "",
+            "0.7": "",
+            "1.0": ""
+          }
+        },
+        {
+          "name": "Accessible build status",
+          "description": "Anyone can easily determine whether or not a build passes our automated tests.",
+          "scoring": {
+            "0.3": "Less than 10 intermittent failures on average on Try",
+            "0.5": "Less than 7 intermittent failures on average on Try; Treeherder's main display summarizes faiures",
+            "0.7": "Less than 5 unclassified intermittents on average on Try; Treeherder moves to a test-centric view instead of a job-centric view",
+            "1.0": "Less than 2 unclassified intermittents on average on Try"
+          }
+        },
+        {
+          "name": "Release Information",
+          "description": "Deploy tooling that puts release information in the right hands at the right time.",
+          "scoring": {
+            "0.3": "",
+            "0.5": "",
+            "0.7": "",
+            "1.0": ""
+          }
+        },
+        {
+          "name": "Release Centralization",
+          "description": "Deploy tooling that centralizes control and reporting of all aspects of each release.",
+          "scoring": {
+            "0.3": "",
+            "0.5": "",
+            "0.7": "",
+            "1.0": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Establish a secure and stable Development and Release Platform",
+      "okrs": ["Build Core Strength"],
+      "results": [
+        {
+          "name": "Risk Mitigation",
+          "description": "Identify and mitigate all services with Security RRA Risks of Maximum or High.",
+          "scoring": {
+            "0.3": "30% of identified Maximum or High SecMap and RRA Risks mitigated",
+            "0.5": "50% of identified Maximum or High SecMap and RRA Risks mitigated",
+            "0.7": "70% of identified Maximum or High SecMap and RRA Risks mitigated",
+            "1.0": "100% of identified Maximum or High SecMap and RRA Risks mitigated"
+          }
+        },
+        {
+          "name": "3-Year Plan",
+          "description": "Finalize and begin implementation of a 3-year plan for datacenter needs beyond 2018.",
+          "scoring": {
+            "0.3": "Agreed upon datacenter strategy plan with IT which includes projected capacity requirements for R&P for 2018 (based on historical trending and planning data available from Firefox Engineering)",
+            "0.5": "Additionally have purchased sufficient hardware to enable a 20%-phased migration to new datacenters without more than a day of treeclosing downtime",
+            "0.7": "Additionally have migrated one of DXR, Bugzilla, or hg to the cloud with local clones/caches where necessary for performance",
+            "1.0": "Additionally have migrated all of DXR, Bugzilla, and hg to the cloud with local clones/caches where necessary for performance"
+          }
+        },
+        {
+          "name": "Maintenance",
+          "description": "Maintain and update existing tools and processes",
+          "scoring": {
+            "0.3": "",
+            "0.5": "",
+            "0.7": "",
+            "1.0": ""
+          }
+        }
+      ]
+    }
+  ]
+}
