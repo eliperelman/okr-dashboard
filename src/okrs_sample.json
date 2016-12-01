@@ -29,10 +29,10 @@
           },
           "score": "0.3",
           "scoring": {
-            "0.3": "",
-            "0.5": "",
-            "0.7": "",
-            "1.0": ""
+            "0.5": "All tasks on trunk-based trees scheduled via TaskCluster/buildbotbridge",
+            "0.7": "All tasks on trunk-based trees running via TaskCluster",
+            "0.9": "Release/Beta/Aurora/Trunk running via TaskCluster",
+            "1.0": "No more buildbot for Firefox release pipeline, including ESR"
           }
         },
         {
