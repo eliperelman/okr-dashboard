@@ -55,7 +55,7 @@
       "results": [
         {
           "name": "Commit Blocking",
-          "description": "Block and commit with issues detected by automated tests, static analysis, or linters.",
+          "description": "Block any commit with issues detected by automated tests, static analysis, or linters.",
           "progress": 0.3,
           "score": "+0.2",
           "scoring": {
