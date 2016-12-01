@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip, Collapse } from 'reactstrap';
+import { Tooltip } from 'reactstrap';
 import Score from './Score';
 import Label from './Label';
 import Info from './Info';
@@ -108,7 +108,7 @@ export default class extends React.Component {
           )}
         </h3>
         {typeof result.progress !== 'number' && (
-          <Collapse isOpen={this.state.collapseOpen} style={{ paddingBottom: 15 }}>
+          <div style={{ paddingBottom: 15, display: this.state.collapseOpen ? 'block' : 'none' }}>
             {
               Object
               .keys(result.progress)
@@ -129,7 +129,7 @@ export default class extends React.Component {
                 );
               })
             }
-          </Collapse>
+          </div>
         )}
         <div className={`row scoring flex-items-xs-left ${status}`}>
           {scores.map((score, key) => (
