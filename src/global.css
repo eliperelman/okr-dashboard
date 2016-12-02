@@ -12,20 +12,16 @@ hr {
   border-top: 1px dotted rgba(255, 255, 255, .1);
 }
 
-h1, .h1 {
-  margin: 10px 0 -5px;
-  font-weight: 100;
-}
-
-h1 hr {
-  border-top: 1px solid rgba(255, 255, 255, .2);
-}
-
-h1 img {
-  width: 45px;
-  height: 30.9px;
+.logo {
   vertical-align: middle;
-  margin-top: -5px;
+  margin: 20px 0;
+  max-height: 55px;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    margin-bottom: 0;
+  }
 }
 
 h2, .h2 {

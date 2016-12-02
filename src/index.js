@@ -10,7 +10,8 @@ render((
   <div className="container-fluid">
     <div className="row">
       <div className="col-xs">
-        <h1><img src={logoUrl} /> Release and Productivity OKRs<hr /></h1>
+        <img src={logoUrl} className="img-fluid logo" />
+        <hr className="hidden-md-up" />
       </div>
     </div>
     <div className="row">
