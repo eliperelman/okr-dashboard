@@ -14,8 +14,8 @@ hr {
 
 .logo {
   vertical-align: middle;
-  margin: 20px 0;
-  max-height: 55px;
+  margin: 15px 0;
+  max-height: 70px;
 }
 
 @media screen and (max-width: 767px) {
@@ -141,6 +141,10 @@ h3, .h3 {
   font-size: 65%;
   border-radius: .1rem;
   margin-right: 3px;
+}
+
+.progress-list .tag {
+  width: 2rem;
 }
 
 h3 .tag {

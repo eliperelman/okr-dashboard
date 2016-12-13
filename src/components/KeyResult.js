@@ -116,7 +116,7 @@ export default class extends React.Component {
                 const value = result.progress[item] * 100;
 
                 return (
-                  <div key={key} style={{ paddingLeft: '5%' }}>
+                  <div key={key} className="progress-list" style={{ paddingLeft: '5%' }}>
                     <Label type={this.getProgressLabel(result.progress[item])}>
                       {
                         Math.floor(value) === value ?
