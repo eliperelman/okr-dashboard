@@ -12,13 +12,13 @@
     "test": "neutrino build"
   },
   "devDependencies": {
-    "bootstrap": "4.0.0-alpha.5",
-    "neutrino": "^3.0.0",
-    "neutrino-preset-react": "^2.1.0",
-    "react": "^15.4.1",
+    "bootstrap": "4.3.1",
+    "neutrino": "^8.3.0",
+    "neutrino-preset-react": "^7.4.0",
+    "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-transition-group": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "reactstrap": "^3.9.2"
+    "react-dom": "^16.8.6",
+    "reactstrap": "^8.0.1"
   }
 }
